@@ -1,5 +1,5 @@
 # Dungeon Master's Toolbox
-#### Video Demo: https://youtu.be/2iFft3KGQGk
+
 ## Overview
 This project aims to deliver a useful set of tools for Dungeon Masters hosting their Dungeons and Dragons sessions.
 
