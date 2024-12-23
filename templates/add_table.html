@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Table
+{% endblock %}
+
+{% block main %}
+    <div class="tables-background p-5">
+
+        <a class="btn btn-secondary mb-5" href="/tables">Go back</a>
+
+        <form action="/add_table" method="post" enctype="multipart/form-data" class="mb-5">
+            <div class="row">
+                <div class="d-flex justify-content-center">
+                    <div class="input-group mb-3 w-25">
+                        <input type="file" id="file" name="file" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-secondary" type="submit">
+                <label>Add table</label>
+            </button>
+        </form>
+
+        <hr>
+
+        <h3 class="mb-5 mt-5">Please format your table in JSON format as in example below:</h3>
+
+        <div class="text-start">
+            <pre><code>
+                [
+                    {
+                        "type" : "weapon",
+                        "action" : "hit",
+                        "rollMin" : "20",
+                        "rollMax" : "24",
+                        "description" : "You feel the eb and flow of the battle, and know where to make your next move.",
+                        "effect" : "After your turn you move to the top of the initiative order."
+                    },
+                    ...
+                ]
+            </code></pre>
+        </div>
+
+        <div class="legend text-start mt-5">
+            <h4 class="mb-3">Legend</h4>
+            <p><strong><em>type:</em></strong> type of the attack (weapon, spell, ...)</p>
+            <p><strong><em>action:</em></strong> resulting action (hit, miss, ...)</p>
+            <p><strong><em>rollMin:</em></strong> minimum dice roll for this event</p>
+            <p><strong><em>rollMax:</em></strong> maximum dice roll for this event</p>
+            <p><strong><em>description:</em></strong> immersive description of event</p>
+            <p><strong><em>rollMin:</em></strong> mechanical result to be applied</p>
+        </div>
+    </div>
+
+{% endblock %}

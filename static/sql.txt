@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS hit_fumble (id INTEGER PRIMARY KEY AUTOINCREMENT, type TEXT, action TEXT, min INTEGER, max INTEGER, description TEXT, effect TEXT);
+

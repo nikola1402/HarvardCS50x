@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+}
+
+pre {
+    padding: 10px;
+    background: black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
+
+.legend {
+    padding-left: 5rem;
+}
+
+.module {
+    height: 100vh;
+    background-position: center;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.module:hover {
+    opacity: 1;
+}
+
+.tables-background {
+    /* background: url('sheet.jpg'); */
+}
+
+.encounter-background {
+    /* background: url('battle.jpg'); */
+}
+
+.module.left {
+    background: url('sheet.jpg');
+    background-size: cover;
+}
+
+.encounter-choice {
+    width: 30%;
+}
+
+
+
+.module.right {
+    background: url('battle.jpg');
+    background-size: cover;
+}
+
+.module-content {
+    color: white;
+    font-size: 50px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    text-decoration: none;
+}
+
+.module-content:hover {
+    text-decoration: underline;
+}
+
+.overlay-title {
+    position: fixed; /* Ensures the title stays on top */
+    top: 10%; /* Adjust vertical positioning */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Perfect horizontal centering */
+    font-size: 4rem; /* Adjust font size */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Make text pop */
+    z-index: 1000; /* High value to appear above everything */
+}
+
+.text-shadow {
+    4px 4px 8px rgba(0, 0, 0, 0.7),  /* Bottom-right shadow */
+    -4px 4px 8px rgba(0, 0, 0, 0.7),  /* Bottom-left shadow */
+    4px -4px 8px rgba(0, 0, 0, 0.7), /* Top-right shadow */
+    -4px -4px 8px rgba(0, 0, 0, 0.7); /* Top-left shadow */
+}
+
+.medievalsharp {
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow:
+      4px 4px 8px rgba(0, 0, 0, 0.7),
+     -4px 4px 8px rgba(0, 0, 0, 0.7),
+      4px -4px 8px rgba(0, 0, 0, 0.7),
+     -4px -4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .module-content {
+        font-size: 42px; /* Smaller font size for smaller screens */
+    }
+
+    .encounter-choice {
+        width: 100%;
+    }
+}
